@@ -1,10 +1,10 @@
 <?php
 
-// Edit these values
-$botToken = 'YOUR_BOT_TOKEN';
-$webhookUrl = 'YOUR_DEPLOYED_URL';
+// Fetch from environment variables
+$botToken = getenv('BOT_TOKEN');
+$webhookUrl = getenv('WEBHOOK_URL');
 
-// Get the update from Telegram
+// Get update data from Telegram
 $update = file_get_contents('php://input');
 $updateData = json_decode($update, true);
 
@@ -53,4 +53,3 @@ $setWebhookRequest = [
 file_get_contents("https://api.telegram.org/bot$botToken/setWebhook?" . http_build_query($setWebhookRequest));
 
 ?>
-￼Enter
