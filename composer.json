@@ -2,11 +2,15 @@
     "name": "auto-kicker-bot",
     "description": "A Telegram bot that bans users who leave a channel",
     "require": {
-        "php": "^8.0"
+        "php": "^8.0",
+        "vlucas/phpdotenv": "^5.5"
     },
     "autoload": {
         "psr-4": {
             "AutoKickerBot\\": "src/"
         }
+    },
+    "scripts": {
+        "start": "php -S 0.0.0.0:8080 -t ."
     }
 }
