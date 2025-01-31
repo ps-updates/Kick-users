@@ -1,0 +1,12 @@
+{
+    "name": "auto-kicker-bot",
+    "description": "A Telegram bot that bans users who leave a channel",
+    "require": {
+        "php": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AutoKickerBot\\": "src/"
+        }
+    }
+}
