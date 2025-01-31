@@ -1,5 +1,5 @@
 {
-    "name": "autokickerbot",
+    "name": "autokicker/autokickerbot",
     "description": "A Telegram bot that bans users who leave a channel",
     "require": {
         "php": "^8.0",
