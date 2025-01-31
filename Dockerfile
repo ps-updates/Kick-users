@@ -1,4 +1,3 @@
-# Use PHP CLI as the base image
 FROM php:8.1-cli
 
 # Set working directory inside the container
@@ -7,7 +6,10 @@ WORKDIR /app
 # Install required PHP extensions
 RUN docker-php-ext-install pdo pdo_mysql
 
-# Install Composer
+# Install Git
+RUN apt-get update && apt-get install -y git
+
+# Install Composer (from official Composer image)
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Copy project files
